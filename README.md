@@ -1,3 +1,4 @@
+![](dkhundley_banner.png)
 # Data Science Workstation Setup
 Welcome! If you are totally new to coding, what you are reading right now is called a README, and this text is being generated from the README.md file. Written using an easy-to-learn syntax called "markdown", READMEs help other developers to learn how to best navigate your code repository. In this particular case, we are using the README to introduce this data science workstation setup guide as well as how to properly navigate it!
 
