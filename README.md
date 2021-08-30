@@ -11,6 +11,9 @@ Before moving forward, you might be curious if you need any specific hardware. W
 
 ## Suggested Installation Order
 - Anaconda
+
+**8/30 Update at 3:30pm CST**: I'm taking a break for a little while! I'll come back to update the rest later this evening. But if I forget or something, as long as you have Anaconda installed, you'll be good for tomorrow night's stream!
+
 - Command Line Interface (CLI)
 - Git
 - Docker
