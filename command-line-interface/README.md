@@ -11,7 +11,22 @@ As noted before, the Mac CLI already uses Linux commands, so you can actually be
 There is more customizability we can do to `iTerm2`, but for now we're going to keep things basic. I might come back and update this Markdown at a later time with those customizability features!
 
 ## Installation on Windows
-By default, Windows comes packaged with its own version of a CLI called the `Command Prompt`. We will NOT be using this as it uses very different commands from Linux, and I'm not sure if it works with most CLI software packages. Fortunately, there is a separate program that will emulate Linux instructions on Windows called `Git Bash`. `Git Bash` comes installed alongside the Windows installation of Git, which we cover elsewhere.
+While macOS is built on top of Linux and therefore uses Linux commands right out of the box, this is not the case with Windows. By default, Windows instead makes use of its own CLI called the **Command Prompt**. Because the Command Prompt uses radically different commands from standard Linux commands, we will NOT be making use of the Command Prompt at all.
+
+In an effort to remedy this, Microsoft has started bundling a program called **Windows Terminal** (with another program called **PowerShell** as a profile) with newer versions of Windows. Windows Terminal and PowerShell have been designed to emulate those same Linux commands we see across macOS and other Linux machines. If these are not already installed on your computer, you can install these directly from the Microsoft Store. Here are the appropriate links for those:
+
+- [Link to install **Windows Terminal**](https://www.microsoft.com/store/productId/9N0DX20HK701)
+- [Link to install **PowerShell**](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D)
+
+To actually make use of Windows Terminal with the PowerShell profile, open Windows Terminal and navigate to the settings. (The screenshot below illustrates where this is, if you can't find it!) Under the "Default profile" dropdown menu, select "PowerShell" (NOT to be confused with Windows PowerShell, which is something different). Then click the "Save" button the bottom right hand corner of the UI.
+
+![](../admin/assets/windows-terminal-settings.png)
+
+Technically, this is all you need to do to get Windows Terminal working, but there are some cool things we can do with Windows Terminal / PowerShell that aren't available right out of the box. If you'd like to enable these advanced features, check out the next subsection!
+
+### Customizing Windows Terminal
+
+
 
 ## Learning Linux Commands
 Linux comes with a lot of common commands that are used on a regular basis. Udacity has an excellent free course that teaches these commands well, and I would highly advise you check that out. Here is a link to that course: [Udacity - Linux Command Line Basics](https://www.udacity.com/course/linux-command-line-basics--ud595).
