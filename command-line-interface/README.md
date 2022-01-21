@@ -1,30 +1,72 @@
 # Command Line Interface (CLI)
 
+
+
 ## What is the Command Line Interface (CLI)?
 The command line interface, or CLI, is the one of the primary ways in which a software developer interacts with a computer. Most programs you are familiar with run as Graphical User Interfaces, or GUIs. (Pronounced "gooey".) As great as GUIs are, they are very subjective from program to program. For example, can you remember how to access the settings for Facebook or Twitter on your phone? Chances are they're in different places! The CLI keeps things a lot more basic, which is helpful for developers as allows for complex functionality to be run in a more simplified, text-based interface.
 
 Mac and Windows each have their own respective CLIs, and for data science work, we're going to focus more on the Mac flavor of this. It's actually not Mac but Linux as the macOS is built on top of Linux. In case you're not aware, Linux is an operating system (OS) similar to how Windows and macOS are OSs. Linux comes in many flavors, inlcuding Debian and Ubuntu, and Linux can range from being very simple to being very complex due to its customizability. For deploying software programs to production environments, many of these software programs are run on Linux.
 
+
+
 ## Installation on Mac
-As noted before, the Mac CLI already uses Linux commands, so you can actually begin immediately using the default `Terminal` application that comes bundled with every Mac. While there is nothing wrong with using the default `Terminal` application, I personally prefer to use `iTerm2`. If you would like to install `iTerm2`, navigate to this website and follow the download instructions: [Link to iTerm2 website](https://iterm2.com/).
+As noted before, the Mac CLI already uses Linux commands, so you can actually begin immediately using the default `Terminal` application that comes bundled with every Mac. Technically, `Terminal` is ready to go right out of the box. You're welcome to begin using it immediately. But... most developers don't like using `Terminal` immediately like that. Instead, many developers (including myself) prefer to use a different CLI program called `iTerm2`. If you're okay with just using `Terminal`, that is totally fine, but if you'd like to learn more about `iTerm2`, see the next subsection.
+
+### Customization with iTerm2
+While there is nothing wrong with using the default `Terminal` application, I personally prefer to use `iTerm2`. If you would like to install `iTerm2`, navigate to this website and follow the download instructions: [Link to iTerm2 website](https://iterm2.com/).
 
 There is more customizability we can do to `iTerm2`, but for now we're going to keep things basic. I might come back and update this Markdown at a later time with those customizability features!
 
+
+
 ## Installation on Windows
-While macOS is built on top of Linux and therefore uses Linux commands right out of the box, this is not the case with Windows. By default, Windows instead makes use of its own CLI called the **Command Prompt**. Because the Command Prompt uses radically different commands from standard Linux commands, we will NOT be making use of the Command Prompt at all.
+While macOS is built on top of Linux and therefore uses Linux commands right out of the box, this is not the case with Windows. By default, Windows instead makes use of its own CLI called the `Command Prompt*`. Because the Command Prompt uses radically different commands from standard Linux commands, we will NOT be making use of the Command Prompt at all.
 
-In an effort to remedy this, Microsoft has started bundling a program called **Windows Terminal** (with another program called **PowerShell** as a profile) with newer versions of Windows. Windows Terminal and PowerShell have been designed to emulate those same Linux commands we see across macOS and other Linux machines. If these are not already installed on your computer, you can install these directly from the Microsoft Store. Here are the appropriate links for those:
+In an effort to remedy this, Microsoft has started bundling a program called `Windows Terminal` (with another program called `PowerShell` as a profile) with newer versions of Windows. `Windows Terminal` and `PowerShell` have been designed to emulate those same Linux commands we see across macOS and other Linux machines. If these are not already installed on your computer, you can install these directly from the Microsoft Store. Here are the appropriate links for those:
 
-- [Link to install **Windows Terminal**](https://www.microsoft.com/store/productId/9N0DX20HK701)
-- [Link to install **PowerShell**](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D)
+- [Link to install `Windows Terminal`](https://www.microsoft.com/store/productId/9N0DX20HK701)
+- [Link to install `PowerShell`](https://www.microsoft.com/store/productId/9MZ1SNWT0N5D)
 
-To actually make use of Windows Terminal with the PowerShell profile, open Windows Terminal and navigate to the settings. (The screenshot below illustrates where this is, if you can't find it!) Under the "Default profile" dropdown menu, select "PowerShell" (NOT to be confused with Windows PowerShell, which is something different). Then click the "Save" button the bottom right hand corner of the UI.
+To actually make use of `Windows Terminal` with the `PowerShell` profile, open `Windows Terminal` and navigate to the settings. (The screenshot below illustrates where this is, if you can't find it!) Under the "Default profile" dropdown menu, select "PowerShell" (NOT to be confused with Windows PowerShell, which is something different). Then click the "Save" button the bottom right hand corner of the UI.
 
 ![](../admin/assets/windows-terminal-settings.png)
 
-Technically, this is all you need to do to get Windows Terminal working, but there are some cool things we can do with Windows Terminal / PowerShell that aren't available right out of the box. If you'd like to enable these advanced features, check out the next subsection!
+Technically, this is all you need to do to get `Windows Terminal working`, but there are some cool things we can do with `Windows Terminal` / `PowerShell` that aren't available right out of the box. If you'd like to enable these advanced features, check out the next subsection!
 
 ### Customizing Windows Terminal
+While the `Windows Terminal` certainly works just fine as we installed it above, most developers (including myself) appreciate extra levels of customization that help navigating the CLI a lot easier. When we're done with this customization, this is what your `Windows Terminal` might look like:
+
+**INSERT SCREENSHOT OF CUSTOM WINDOWS TERMINAL**
+
+To enable this, we will be using something called `Oh My Posh`, "Posh" being short for `PowerShell`. In the Mac world, there is a very popular CLI customization tool called `Oh My Zsh`, so `Oh My Posh` is basically Window's version of that. To get this working, we'll need to follow the following high level steps:
+
+1. Installing the Meslo Font
+2. Creating the PowerShell Profile
+3. x
+
+Let's cover each of these steps more in depth below.
+
+#### 1. Installing the Meslo Font
+Because `Oh My Posh` uses special characters not found in the default fonts that come pre-bundled with Windows. The creators of `Oh My Posh` recommend using this font called **Meslo**. To download Meslo, simply click this link: [Download Meslo here](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip). This will download a ZIP file with a bunch of variants of Meslo font. Technically, we only need one of these variants: `Meslo LGM NF`. To install, double-click on this variant, which will open a window that looks like this:
+
+![](../admin/assets/menlo-font-installation.png)
+
+Notice in the top left of this window, there is an "Install" button. Click that, and your font will be installed! (Note: You're welcome to install as many variants of this Menlo font as you'd like, but be aware, there's 96 of them, so you'd have to do this 96 times.)
+
+To update the default font of `Windows Terminal`, navigate to the "Settings" again. This time, click on "Open JSON File" as indicated in the screenshot below.
+
+![](../admin/assets/windows-terminal-json-font-settings.png)
+
+What this will do is open up the default Windows `Notepad` to edit some basic settings in text form with this organization style called **JSON**. Don't worry if you don't know what JSON is, the only thing you'll need to do is scroll down to a section called `"profiles"`, and under the `"defaults"` section, you will need to add the information found in the screenshot below. Please note that syntax and spacing is important here!!
+
+![](../admin/assets/menlo-default-font.png)
+
+Save this (hotkey: `CTRL+S`) and exit `Notepad`. When you close out of `Windows Terminal` and re-open it, your default font will now be Menlo!
+
+#### 2. Creating a PowerShell Profile
+
+the first thing we will need to do is to create a **PowerShell profile**. The `PowerShell` profile is basically a little script that runs when a new window is opened with `PowerShell` running. In other words, when we open up `Windows Terminal` (with the default `PowerShell` running, as we setup in the previous section), the `PowerShell profile` will do all the stuff to make `Windows Terminal` look all nice and pretty!
+
 
 
 
