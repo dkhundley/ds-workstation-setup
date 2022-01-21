@@ -20,7 +20,7 @@ There is more customizability we can do to `iTerm2`, but for now we're going to 
 
 
 ## Installation on Windows
-While macOS is built on top of Linux and therefore uses Linux commands right out of the box, this is not the case with Windows. By default, Windows instead makes use of its own CLI called the `Command Prompt*`. Because the Command Prompt uses radically different commands from standard Linux commands, we will NOT be making use of the Command Prompt at all.
+While macOS is built on top of Linux and therefore uses Linux commands right out of the box, this is not the case with Windows. By default, Windows instead makes use of its own CLI called the `Command Prompt`. Because the Command Prompt uses radically different commands from standard Linux commands, we will NOT be making use of the Command Prompt at all.
 
 In an effort to remedy this, Microsoft has started bundling a program called `Windows Terminal` (with another program called `PowerShell` as a profile) with newer versions of Windows. `Windows Terminal` and `PowerShell` have been designed to emulate those same Linux commands we see across macOS and other Linux machines. If these are not already installed on your computer, you can install these directly from the Microsoft Store. Here are the appropriate links for those:
 
@@ -31,12 +31,12 @@ To actually make use of `Windows Terminal` with the `PowerShell` profile, open `
 
 ![](../admin/assets/windows-terminal-settings.png)
 
-Technically, this is all you need to do to get `Windows Terminal working`, but there are some cool things we can do with `Windows Terminal` / `PowerShell` that aren't available right out of the box. If you'd like to enable these advanced features, check out the next subsection!
+Technically, this is all you need to do to get `Windows Terminal` working, but there are some cool things we can do with `Windows Terminal` / `PowerShell` that aren't available right out of the box. If you'd like to enable these advanced features, check out the next subsection!
 
 ### Customizing Windows Terminal
 While the `Windows Terminal` certainly works just fine as we installed it above, most developers (including myself) appreciate extra levels of customization that help navigating the CLI a lot easier. When we're done with this customization, this is what your `Windows Terminal` might look like:
 
-**INSERT SCREENSHOT OF CUSTOM WINDOWS TERMINAL**
+**INSERT SCREENSHOT OF CUSTOM WINDOWS TERMINAL WHEN COMPLETE**
 
 To enable this, we will be using something called `Oh My Posh`, "Posh" being short for `PowerShell`. In the Mac world, there is a very popular CLI customization tool called `Oh My Zsh`, so `Oh My Posh` is basically Window's version of that. To get this working, we'll need to follow the following high level steps:
 

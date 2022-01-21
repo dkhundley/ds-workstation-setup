@@ -1,5 +1,5 @@
-![](admin/assets/dkhundley_banner.png)
-# Data Science Workstation Setup
+![](admin/assets/ds-workstation-guide-banner.png)
+# Data Science Workstation Setup Guide!
 Welcome! If you are totally new to coding, what you are reading right now is called a README, and this text is being generated from the README.md file. Written using an easy-to-learn syntax called "markdown", READMEs help other developers to learn how to best navigate your code repository. In this particular case, we are using the README to introduce this data science workstation setup guide as well as how to properly navigate it!
 
 If you already have some experience doing software development, it may be that you already have some of these tools (or close equivalents) already installed. In that case, feel free to jump around to install what you need. If you are totally new to software development, I'd recommend following sticking with the path as it is laid out.
