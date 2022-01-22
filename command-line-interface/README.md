@@ -36,7 +36,7 @@ Technically, this is all you need to do to get `Windows Terminal` working, but t
 ### Customizing Windows Terminal
 While the `Windows Terminal` certainly works just fine as we installed it above, most developers (including myself) appreciate extra levels of customization that help navigating the CLI a lot easier. When we're done with this customization, this is what your `Windows Terminal` might look like:
 
-**INSERT SCREENSHOT OF CUSTOM WINDOWS TERMINAL WHEN COMPLETE**
+![](../admin/assets/my-prettified-windows-terminal.png)
 
 To enable this, we will be using something called `Oh My Posh`, "Posh" being short for `PowerShell`. In the Mac world, there is a very popular CLI customization tool called `Oh My Zsh`, so `Oh My Posh` is basically Window's version of that. To get this working, we'll need to follow the following high level steps:
 
@@ -101,19 +101,19 @@ Okay, as I mentioned in the last step, `Oh My Posh` downloaded a bunch of themes
 
 Once you find one you like, we then need to edit our `PowerShell profile` to set the theme appropriately. Now, if you're curious where `Oh My Posh` downloaded all the themes, you can find them in this filepath (note that your username will be specific to you):
 
-```aidl
+```
 C:\Users\<YOUR_USERNAME>\AppData\Local\Programs\oh-my-posh\themes
 ```
 
 I personally like the simple Amro theme the best, so that's what I'm going to select. In order to edit your `PowerShell profile` to add your theme, you will need to run this command:
 
-```aidl
+```
 notepad $PROFILE
 ```
 
 This will open up `Notepad` on your computer, and all you need to do is to paste in your selected theme here. Here's what I pasted in mine (again keeping in mind that your username will be different):
 
-```aidl
+```
 oh-my-posh --init --shell pwsh --config C:\Users\david\AppData\Local\Programs\oh-my-posh\themes\amro.omp.json | Invoke-Expression
 ```
 
@@ -130,13 +130,13 @@ Fortunately, `PowerShell` supports a concept called **aliasing**. What this basi
 
 So in this specific example, I like to keep my Git repositories at the following path:
 
-```aidl
+```
 C:\Users\david\Documents\Repositories
 ```
 
 Instead of typing the Linux `cd` command over and over to navigate to that, I can instead create an alias for that. Creating an alias is fortunately very simple. Just like we added our theme to our `PowerShell profile` from the previous step, we can also add an alias as the following:
 
-```aidl
+```
 function repos { set-location "C:\Users\david\Documents\Repositories" }
 ```
 
