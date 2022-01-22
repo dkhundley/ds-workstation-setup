@@ -42,7 +42,9 @@ To enable this, we will be using something called `Oh My Posh`, "Posh" being sho
 
 1. Installing the Meslo Font
 2. Creating the PowerShell Profile
-3. x
+3. Installing Oh My Posh
+4. Setting the Oh My Posh theme
+5. Adding an alias for quick navigation
 
 Let's cover each of these steps more in depth below.
 
@@ -65,7 +67,84 @@ Save this (hotkey: `CTRL+S`) and exit `Notepad`. When you close out of `Windows 
 
 #### 2. Creating a PowerShell Profile
 
-the first thing we will need to do is to create a **PowerShell profile**. The `PowerShell` profile is basically a little script that runs when a new window is opened with `PowerShell` running. In other words, when we open up `Windows Terminal` (with the default `PowerShell` running, as we setup in the previous section), the `PowerShell profile` will do all the stuff to make `Windows Terminal` look all nice and pretty!
+The first thing we will need to do is to create a **PowerShell profile**. The `PowerShell` profile is basically a little script that runs when a new window is opened with `PowerShell` running. In other words, when we open up `Windows Terminal` (with the default `PowerShell` running, as we setup in the previous section), the `PowerShell profile` will do all the stuff to make `Windows Terminal` look all nice and pretty!
+
+First off, let's do a quick check to see if you have a profile already created. In order to do that, run the following command:
+
+```
+Test-Path -Path $PROFILE
+```
+
+If this comes back as "False," this means a `PowerShell profile` does not exist for you yet, which is expected if this is your first time setting up your Windows machine! In order to create your `PowerShell profile`, run the following command:
+
+```
+New-Item -ItemType File -Path $PROFILE -Force
+```
+
+On executing this command, you should see something like the screenshot below.
+
+![](../admin/assets/new-powershell-profile.png)
+
+That's it for creating the `PowerShell profile`! Let's move on to populating with what we need for `Oh My Posh`.
+
+#### 3. Installing Oh My Posh
+In order to install `Oh My Posh` directly from your `Windows Terminal`, all you have to do is run the following command:
+
+```
+winget install JanDeDobbeleer.OhMyPosh
+```
+
+What this did was install the executable file in order to actually get `Oh My Posh` working as well as download a bunch of different themes to select from. And that's pretty much it for this step! In the next step, you'll see how we can actually set the theme to "prettify" our `Windows Terminal`!
+
+#### 4. Setting the Oh My Posh Theme
+Okay, as I mentioned in the last step, `Oh My Posh` downloaded a bunch of themes we can select from. If you'd like to preview all the themes, check out the official `Oh My Posh` website [at this link](https://ohmyposh.dev/docs/themes).
+
+Once you find one you like, we then need to edit our `PowerShell profile` to set the theme appropriately. Now, if you're curious where `Oh My Posh` downloaded all the themes, you can find them in this filepath (note that your username will be specific to you):
+
+```aidl
+C:\Users\<YOUR_USERNAME>\AppData\Local\Programs\oh-my-posh\themes
+```
+
+I personally like the simple Amro theme the best, so that's what I'm going to select. In order to edit your `PowerShell profile` to add your theme, you will need to run this command:
+
+```aidl
+notepad $PROFILE
+```
+
+This will open up `Notepad` on your computer, and all you need to do is to paste in your selected theme here. Here's what I pasted in mine (again keeping in mind that your username will be different):
+
+```aidl
+oh-my-posh --init --shell pwsh --config C:\Users\david\AppData\Local\Programs\oh-my-posh\themes\amro.omp.json | Invoke-Expression
+```
+
+Just to ensure you're on the right track, here's a screenshot of what this should look like for you.
+
+![](../admin/assets/adding-oh-my-posh-to-powershell.png)
+
+Once you've added your theme to your `PowerShell profile` in `Notepad` here, be sure to save and then close out. Now when you restart your `Windows Terminal`, you should have your prettified `Oh My Posh` theme working! Now, if you want, you can be done here, but I would encourage you to check out the last step anyway...
+
+#### 5. Adding an alias for quick navigation
+As you'll discover when learning the Linux commands, navigating around your files is easy but can be a little bit cumbersome. For example, it would be annoying to constantly have to type the `cd` command to navigate to where my Git repositories reside.
+
+Fortunately, `PowerShell` supports a concept called **aliasing**. What this basically means is that you can define your own special command that serves as a shortcut proxy in place of doing something like all those `cd` commands.
+
+So in this specific example, I like to keep my Git repositories at the following path:
+
+```aidl
+C:\Users\david\Documents\Repositories
+```
+
+Instead of typing the Linux `cd` command over and over to navigate to that, I can instead create an alias for that. Creating an alias is fortunately very simple. Just like we added our theme to our `PowerShell profile` from the previous step, we can also add an alias as the following:
+
+```aidl
+function repos { set-location "C:\Users\david\Documents\Repositories" }
+```
+
+Here's what that looks like as a screenshot:
+
+![](../admin/assets/powershell-alias.png)
+
+Save and close out of `Notepad` here to apply the changes. Now when I open a new `Windows Terminal` and type the word `repos`, it will automatically jump to that directory with my Git repositories!
 
 
 
