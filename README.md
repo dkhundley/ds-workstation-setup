@@ -16,8 +16,8 @@ As some of the installations in this tutorial require prerequisite dependencies,
 
 ## Required Installations
 
-- Git
-- Command Line Interface (CLI)
+- [Command Line Interface (CLI)](command-line-interface/README.md)
+- [Git](git/README.md)
 - Python
 - Integrated Development Environment (IDE)
 - Docker
