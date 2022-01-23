@@ -1,0 +1,16 @@
+# Instantiating the Oh My Posh theme
+oh-my-posh --init --shell pwsh --config C:\Users\david\AppData\Local\Programs\oh-my-posh\themes\amro.omp.json | Invoke-Expression
+
+# Setting my own alias to quickly get to my Git repositories
+function repos { set-location "C:\Users\david\Documents\Repositories" }
+
+# Enabling autosuggestions
+Import-Module PSReadLine
+Set-PSReadLineOption -PredictionSource History
+
+# Shows navigable menu of all options when hitting Tab
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+
+# Autocompletion for arrow keys
+Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
